@@ -3,7 +3,7 @@
   "version": "0.0.1-0",
   "private": true,
   "scripts": {
-    "test": "redis-cli flushall && node --preserve-symlinks test test",
+    "test": "node --preserve-symlinks test test",
     "watch": "grunt watch"
   },
   "dependencies": {
@@ -35,10 +35,12 @@
     "bedrock-test": "^5.0.0",
     "bedrock-validation": "^4.0.0",
     "blessed": "^0.1.81",
+    "bson-ext": "^2.0.3",
     "grunt": "^1.0.1",
     "jsonld": "^2.0.0",
     "jsonld-signatures": "^4.5.0",
     "lodash": "^4.17.4",
+    "mongodb": "^2.2.36",
     "request": "^2.81.0"
   }
 }

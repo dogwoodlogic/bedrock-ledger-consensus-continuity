@@ -8,8 +8,8 @@ config.mocha.tests.push(path.join(__dirname, 'mocha'));
 
 // MongoDB
 config.mongodb.name = 'bedrock_ledger_continuity_test';
-config.mongodb.dropCollections.onInit = true;
-config.mongodb.dropCollections.collections = [];
+// config.mongodb.dropCollections.onInit = true;
+// config.mongodb.dropCollections.collections = [];
 
 // reduce processing interval for testing
 config['ledger-consensus-continuity'].worker.election.gossipInterval = 0;
@@ -17,7 +17,9 @@ config['ledger-consensus-continuity'].worker.election.gossipInterval = 0;
 // decrease delay for gossiping with the same peer
 config['ledger-consensus-continuity'].gossip.coolDownPeriod = 250;
 
-config['ledger-consensus-continuity'].gossip.maxDepth = 6;
+config['ledger-consensus-continuity'].gossip.maxDepth = 200;
+
+config['ledger-consensus-continuity'].gossip.maxEvents = 5000;
 
 // disable caching in test
 config['ledger-consensus-continuity'].gossip.cache.enabled = false;
