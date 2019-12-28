@@ -173,7 +173,7 @@ describe.only('X Block Test', () => {
      * 7. attempt to retrieve all records added in 1 from the `records` API
      */
 
-    const targetBlockHeight = 50;
+    const targetBlockHeight = 5000000;
 
     describe(`${targetBlockHeight} Blocks`, () => {
       it('makes many more blocks', function(done) {
