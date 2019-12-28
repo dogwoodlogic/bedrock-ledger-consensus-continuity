@@ -20,7 +20,6 @@ bedrock.events.on('bedrock.init', () => {
   }
 });
 
-config.server.host = 'packet1.orgidpoc.com';
-
 require('bedrock-test');
+config.server.host = 'packet1.orgidpoc.com';
 bedrock.start();
