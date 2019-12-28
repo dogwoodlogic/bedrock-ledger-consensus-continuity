@@ -290,6 +290,8 @@ function _nBlocks({consensusApi, targetBlockHeight}, callback) {
               return callback(err);
             }
             const {block} = result.eventBlock;
+            console.log('BLOCK-HEIGHT', block.blockHeight);
+
             if(block.blockHeight >= targetBlockHeight) {
               return ledgerNode.storage.blocks.getByHeight(
                 targetBlockHeight, (err, result) => {
