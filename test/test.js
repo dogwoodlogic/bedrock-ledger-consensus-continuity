@@ -21,5 +21,9 @@ bedrock.events.on('bedrock.init', () => {
 });
 
 require('bedrock-test');
-config.server.host = 'packet1.orgidpoc.com';
+
+config.server.domain = 'packet1.orgidpoc.com';
+config.server.port = 443;
+config.server.httpPort = 80;
+
 bedrock.start();
