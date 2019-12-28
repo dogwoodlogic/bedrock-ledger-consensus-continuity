@@ -2,6 +2,7 @@
  * Copyright (c) 2017-2018 Digital Bazaar, Inc. All rights reserved.
  */
 const bedrock = require('bedrock');
+const {config} = bedrock;
 const {jsonLdDocumentLoader} = require('bedrock-jsonld-document-loader');
 require('bedrock-ledger-consensus-continuity');
 require('bedrock-ledger-consensus-continuity-es-most-recent-participants');
@@ -18,6 +19,8 @@ bedrock.events.on('bedrock.init', () => {
     jsonLdDocumentLoader.addStatic(url, mockData.ldDocuments[url]);
   }
 });
+
+config.server.host = 'packet1.orgidpoc.com';
 
 require('bedrock-test');
 bedrock.start();
