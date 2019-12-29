@@ -26,4 +26,8 @@ config.server.domain = 'packet1.orgidpoc.com';
 config.server.port = 443;
 config.server.httpPort = 80;
 
+bedrock.events.on('bedrock-express.init', server => {
+  server.use(require('compression')());
+});
+
 bedrock.start();
